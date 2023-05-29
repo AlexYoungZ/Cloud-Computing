@@ -16,12 +16,12 @@ Clouds, Distributed Systems, Networking. Learn about and build distributed and n
 
 ### Cloud Computing Programming Assignments
 
-| Assignment Index                                      | Detailed Requirements                                                                        | Quick Link to My Solution                                                                                                             |
-|-------------------------------------------------------|----------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| [Assignment 1](#assignment1-membership-protocol)      | [MapReduce](http://nil.csail.mit.edu/6.824/2020/labs/lab-mr.html)                            | [mr](https://github.com/AlexYoungZ/Distributed-System-6.824/tree/master/src/mr)                                                       |
-| [Assignment 2](#lab2-raft)                            | [Raft](http://nil.csail.mit.edu/6.824/2020/labs/lab-raft.html)                               | [raft](https://github.com/AlexYoungZ/Parallel-Concurrent-Distributed-Programming/tree/master/Parallel%20Programming/miniproject_2)    |
-| [Assignment 3](#lab3-fault-tolerant-keyvalue-service) | [Fault-tolerant Key/Value Service](http://nil.csail.mit.edu/6.824/2020/labs/lab-kvraft.html) | [kvraft](https://github.com/AlexYoungZ/Parallel-Concurrent-Distributed-Programming/tree/master/Parallel%20Programming/miniproject_3)  |
-| [Assignment 4](#lab4-sharded-keyvalue-service)        | [Sharded Key/Value Service](http://nil.csail.mit.edu/6.824/2020/labs/lab-shard.html)         | [shardkv](https://github.com/AlexYoungZ/Parallel-Concurrent-Distributed-Programming/tree/master/Parallel%20Programming/miniproject_4) |
+| Assignment Index                                      | Detailed Requirements                                                                                       | Quick Link to My Solution                                                                                                             |
+|-------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| [Assignment 1](#assignment1-membership-protocol)      | [Membership Protocol](https://github.com/AlexYoungZ/Cloud-Computing/blob/master/mp1/mp1_specifications.pdf) | [Gossip](https://github.com/AlexYoungZ/Cloud-Computing/tree/master/mp1)                                                               |
+| [Assignment 2](#lab2-raft)                            | [Raft](http://nil.csail.mit.edu/6.824/2020/labs/lab-raft.html)                                              | [raft](https://github.com/AlexYoungZ/Parallel-Concurrent-Distributed-Programming/tree/master/Parallel%20Programming/miniproject_2)    |
+| [Assignment 3](#lab3-fault-tolerant-keyvalue-service) | [Fault-tolerant Key/Value Service](http://nil.csail.mit.edu/6.824/2020/labs/lab-kvraft.html)                | [kvraft](https://github.com/AlexYoungZ/Parallel-Concurrent-Distributed-Programming/tree/master/Parallel%20Programming/miniproject_3)  |
+| [Assignment 4](#lab4-sharded-keyvalue-service)        | [Sharded Key/Value Service](http://nil.csail.mit.edu/6.824/2020/labs/lab-shard.html)                        | [shardkv](https://github.com/AlexYoungZ/Parallel-Concurrent-Distributed-Programming/tree/master/Parallel%20Programming/miniproject_4) |
 
 * * *
 
