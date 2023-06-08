@@ -21,20 +21,25 @@
  */
 class Trace {
 public:
-	FILE *logF;
-	int traceFileCreate();
-	int printToTrace(
-             char *keyMessage,    // Message to be written as key
-             char *valueMessage   // Message to be written as value
-             );
-	int traceFileClose();
-	int funcEntry(
-              char *valueMessage  // Value
-			  );
-	int funcExit(
-             char *valueMessage, // Value
-             int f_rc = SUCCESS           // Function RC
-             );
+    FILE *logF;
+
+    int traceFileCreate();
+
+    int printToTrace(
+            char *keyMessage,    // Message to be written as key
+            char *valueMessage   // Message to be written as value
+    );
+
+    int traceFileClose();
+
+    int funcEntry(
+            char *valueMessage  // Value
+    );
+
+    int funcExit(
+            char *valueMessage, // Value
+            int f_rc = SUCCESS           // Function RC
+    );
 };
 
 #endif

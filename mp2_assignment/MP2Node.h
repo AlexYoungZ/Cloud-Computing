@@ -18,6 +18,21 @@
 #include "Params.h"
 #include "Message.h"
 #include "Queue.h"
+#include <unordered_map>
+#include <set>
+
+class transactionInfo {
+public:
+    int transactionCount;
+    int transactionSuccess;
+    int transactionId;
+    int createTime;
+    MessageType originalMsgType;
+    string key;
+    string value;
+    transactionInfo(int transCount, int transSuccess, int transId, int cTime, MessageType type, string key, string value) :
+            transactionCount(transCount), transactionSuccess(transSuccess), transactionId(transId), createTime(cTime), originalMsgType(type), key(key), value(value) {}
+};
 
 /**
  * CLASS NAME: MP2Node
@@ -47,6 +62,8 @@ private:
 	EmulNet * emulNet;
 	// Object of Log
 	Log * log;
+    // Map of transaction info
+    unordered_map<int, transactionInfo *> transactionMap;
 
 public:
 	MP2Node(Member *memberNode, Params *par, EmulNet *emulNet, Log *log, Address *addressOfMember);
@@ -74,7 +91,7 @@ public:
 	void checkMessages();
 
 	// coordinator dispatches messages to corresponding nodes
-	void dispatchMessages(Message message);
+	void dispatchMessages(Message message, string key, string value);
 
 	// find the addresses of nodes that are responsible for a key
 	vector<Node> findNodes(string key);
@@ -87,6 +104,11 @@ public:
 
 	// stabilization protocol - handle multiple failures
 	void stabilizationProtocol();
+
+    void processReply(Message receivedMessage);
+    void checkQuorum(transactionInfo* info);
+    void checkTimeout(transactionInfo* info);
+    int getTransactionID();
 
 	~MP2Node();
 };
