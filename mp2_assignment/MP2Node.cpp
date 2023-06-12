@@ -288,9 +288,6 @@ void MP2Node::checkMessages() {
 
         string message(data, data + size);
 
-        /*
-         * Handle the message types here
-         */
         Message msg(message);
         Message *replyMsg = nullptr;
         switch (msg.type) {
@@ -348,12 +345,8 @@ void MP2Node::checkMessages() {
             default:
                 break;
         }
-
     }
-    /*
-     * This function should also ensure all READ and UPDATE operation
-     * get QUORUM replies
-     */
+
     /*
      * Check timeout failure for all ongoing transaction
      */
