@@ -462,7 +462,8 @@ string MP1Node::printAddress(Address *addr) {
  */
 string MP1Node::printMemberList() {
     stringstream ss;
-    ss << "\n--------------------------------------------------------------------------------------------------------------\n";
+    ss
+            << "\n--------------------------------------------------------------------------------------------------------------\n";
     ss << "current time: " << par->getcurrtime() << endl;
     for (MemberListEntry entry: memberNode->memberList) {
         ss << "id: " << entry.getid()
@@ -475,6 +476,7 @@ string MP1Node::printMemberList() {
            << " | "
            << "time diff: " << par->getcurrtime() - entry.gettimestamp() << endl;
     }
-    ss << "\n--------------------------------------------------------------------------------------------------------------\n";
+    ss
+            << "\n--------------------------------------------------------------------------------------------------------------\n";
     return ss.str();
 }
